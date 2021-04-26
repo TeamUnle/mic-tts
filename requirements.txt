@@ -1,0 +1,4 @@
+keyboard==0.13.5
+pipwin==0.5.1
+pygame==2.0.1
+requests==2.25.1

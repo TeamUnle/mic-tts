@@ -3,6 +3,7 @@
 
 ## 사용법
 - virtual Cable 설치 [윈도우](https://download.vb-audio.com/Download_CABLE/VBCABLE_Driver_Pack43.zip)/[맥](https://download.vb-audio.com/Download_MAC/VBCable_MACDriver_Pack108.dmg)
+
 ![1](./pic/2.PNG)
 - 컴퓨터가 64비트면 위에거 아니면 아래거를 관리자권한으로 실행
 ![2](./pic/1.PNG)

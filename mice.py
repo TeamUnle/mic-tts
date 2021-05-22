@@ -1,7 +1,11 @@
 from pygame import mixer
 from urllib import parse
+from pygame._sdl2 import get_num_audio_devices, get_audio_device_name
 import pygame, keyboard, requests, os
-mixer.init(devicename="CABLE Input(VB-Audio Virtual Cable)")
+mixer.init()
+print('[아래중 선택]\n'+'\n'.join([get_audio_device_name(x, 0).decode() for x in range(get_num_audio_devices(0))]))
+mixer.quit()
+mixer.init(devicename=input("디바이스 이름: "))
 def play(music, vol=0.7):
     """play music function"""
     def stop():

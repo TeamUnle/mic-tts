@@ -1,5 +1,5 @@
 ﻿# mic-tts
-마이크로 tts랑 효과음같은거 재생
+자신의 입력장치에서 mp3, TTS가 출력되게 만들어줍니다.
 
 ## 사용법
 - virtual Cable 설치 [윈도우](https://download.vb-audio.com/Download_CABLE/VBCABLE_Driver_Pack43.zip)/[맥](https://download.vb-audio.com/Download_MAC/VBCable_MACDriver_Pack108.dmg)

@@ -57,7 +57,7 @@ def down(url):
         f = open("./voice.mp3", "wb")
         f.write(r.content)
         f.close()
-        return 'voice.mp3'
+        return './voice.mp3'
     except:
         print('cant download the tts file')
         os.remove('./voice.mp3')
@@ -76,8 +76,8 @@ def tts(event):
         tts = gTTS(text=txt, lang='ko', slow=False)
         if txt.startswith('`en '):
             tts = gTTS(text=txt[4:], lang='en', slow=False)
-        tts.save('voice.mp3')
-        return play('voice.mp3')
+        tts.save('./voice.mp3')
+        return play('./voice.mp3')
 
 scrollbar=Scrollbar(frame)
 scrollbar.pack(side="right", fill="y")
@@ -117,7 +117,13 @@ def callb(event):
         data = event.widget.get(index)
         mi = down(f"https://tts-translate.kakao.com/newtone?message=%s"%parse.quote(data))
         if mi:
-            return play(mi)
+            if mi != 'sans':
+                return play(mi, globals()["value"] / 10000)
+            tts = gTTS(text=data, lang='ko', slow=False)
+            if data.startswith('`en '):
+                tts = gTTS(text=data[4:], lang='en', slow=False)
+            tts.save('./voice.mp3')
+            return play('./voice.mp3')
 listbox.pack( side = LEFT )
 wowbox.pack(side = RIGHT)
 scrollbar["command"]=listbox.yview

@@ -10,6 +10,11 @@ from pygame._sdl2 import get_num_audio_devices, get_audio_device_name
 
 discord = pypresence.Presence("863718334696128533")
 
+if not os.path.isdir('./sounds/'):
+    try:
+        os.mkdir('./sounds/')
+    except:
+        print('cant make the folder!')
 try:
     discord.connect()
     discord.update(

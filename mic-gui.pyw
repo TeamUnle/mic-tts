@@ -148,7 +148,7 @@ frame.pack( padx = 30, pady = 50 )
 listbox.bind("<Return>", tts)
 
 sel_window = Toplevel(window)
-sel_window.wm_attributes('-topmost', 1)
+sel_window.wm_transient(window)
 sel_window.title('select input')
 sel_window.resizable(False, False)
 sel_window.geometry('240x120')

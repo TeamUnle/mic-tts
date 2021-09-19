@@ -20,7 +20,7 @@ try:
     discord.update(
         large_image="mint_choco",
         state="파이썬 스테레오 믹스 프로젝트",
-        details="메데이아#4476과 \앱#5120이 제작한",
+        details="메데이아 벨리아르#0101과 \앱#5120이 제작한",
         buttons=[
             {
                 "label": "다운로드",

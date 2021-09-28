@@ -1,7 +1,7 @@
 # mic-tts
 자신의 입력장치에서 mp3, TTS가 출력되게 만들어줍니다.
 
-**GUI by [@Medeia-Beliar](https://github.com/Medeia-Beliar)**
+**GUI by [@Lariel](https://github.com/La-riel)**
 
 ## 사용법
 - virtual Cable 설치 [윈도우](https://download.vb-audio.com/Download_CABLE/VBCABLE_Driver_Pack43.zip)/[맥](https://download.vb-audio.com/Download_MAC/VBCable_MACDriver_Pack108.dmg)

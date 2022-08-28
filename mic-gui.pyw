@@ -95,6 +95,16 @@ else:
     for item in files:
         listbox.insert(i, files[i])
         i+=1
+def reset():
+    files = list(map(lambda x:os.path.splitext(x)[0], os.listdir('./sounds/')))
+    i = 0
+    print("!")
+    global listbox
+    listbox.delete(0, len(files))
+    for _ in files:
+        print(files[i])
+        listbox.insert(i, files[i])
+        i += 1
 def select(self):
     if mixer.get_init() == None:
         print('v')
@@ -135,6 +145,8 @@ scrollbar["command"]=listbox.yview
 listbox.bind("<<ListboxSelect>>", callback)
 wowbox.bind("<<ListboxSelect>>", callb)
 button = Button(window, width=30, command=stop, repeatdelay=100, repeatinterval=100, text="정지")
+resetb = Button(window, width=5, command=reset, repeatdelay=100, repeatinterval=100, text="리로드")
+resetb.pack(side=LEFT)
 button.pack( side = BOTTOM)
 entry=Entry(window,width=30)
 entry.bind("<Return>", tts)
